@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="Blog Page">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Charles Yang">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Docker常见Q&amp;A">
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Blog Page">
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Charles&#39;s Blog">
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article">
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary">
+    
+
+    <!-- Title -->
+    
+    <title>Docker常见Q&amp;A - Charles&#39;s Blog</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/lucky.github.io/css/style.css">
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/lucky.github.io/" title="Charles's Blog">
+            <img src="http://www.codeblocq.com/assets/projects/hexo-theme-anodyne/assets/anodyne.svg" class="dib h3" alt="Charles's Blog">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" href="/lucky.github.io/" title="Home">
+                    Home
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" href="/lucky.github.io/tags" title="Tags">
+                    Tags
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" href="/lucky.github.io/categories" title="Categories">
+                    Categories
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">Docker常见Q&A</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2018-11-01</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa-file-text-o"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+
+                    <!-- Main Post Content -->
+                    <h2 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h2><ul>
+<li>Docker是什么 (可以类比为轻量级虚拟机</li>
+<li>容器是什么，有什么特征 (一个轻量级的沙箱，容器是从镜像创建的。可以启动开始停止删除，容器彼此间相互隔离。)</li>
+<li>容器和镜像的区别 (容器是镜像的运行实例，利用镜像可以创建一个容器：docker run -it ubuntu:14.04 bash)</li>
+<li>镜像仓库(Registry)是什么 (类似于代码仓库，是集中存放镜像文件的场所。)</li>
+<li>Docker数据管理形式有哪些 (数据卷：容器内数据直接映射到本地主机环境，数据卷容器：使用特定容器维护数据卷)</li>
+<li>数据卷是什么 (可供容器使用的特殊目录，它将主机操作系统目录直接映射进容器。)</li>
+<li>虚拟机和Docker的区别</li>
+<li><p><img src="https://makefriends.bs2dl.yy.com/bm1541079061814.png" alt="x"></p>
+</li>
+<li><p>Docker的整体架构</p>
+</li>
+<li><img src="https://makefriends.bs2dl.yy.com/bm1541079113347.png" alt="x"></li>
+<li>核心在于 Dockerdaemon</li>
+<li>Docker 镜像是什么 (只读模板，包含一个基本的操作系统，Docker运行容器前需要本地存在对应的镜像。)</li>
+<li>如何创建一个镜像 (基于已有镜像容器创建、基于本地模板导入、基于dockerfile创建)</li>
+<li>端口映射有什么作用 (在启动容器的时候，容器外部是无法通过网络访问容器内部的网络应用和服务，必须通过指定端口映射才可以访问。)</li>
+<li>容器互联是什么  (是一种让多个容器中的应用进行快速交互的方式。它会在源和接收容器之间创建连接关系，接收容器通过容器名快速访问到源容器。相当于创建了一个虚拟通道，两个容器不用再通过宿主主机端口映射进行连接。)</li>
+<li>如何使用Docker镜像，添加、拷贝文件，执行命令</li>
+<li>如何注册一个Docker服务</li>
+</ul>
+<ul>
+<li>Dockefile的格式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>用法 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FROM</td>
+<td>基础镜像</td>
+</tr>
+<tr>
+<td>RUN</td>
+<td>执行命令</td>
+</tr>
+<tr>
+<td>ADD</td>
+<td>添加文件</td>
+</tr>
+<tr>
+<td>COPY</td>
+<td>复制文件</td>
+</tr>
+<tr>
+<td>CMD</td>
+<td>执行命令</td>
+</tr>
+<tr>
+<td>EXPOSE</td>
+<td>暴露端口</td>
+</tr>
+<tr>
+<td>WORKDIR</td>
+<td>指定路径</td>
+</tr>
+<tr>
+<td>MAINTAINER</td>
+<td>维护者</td>
+</tr>
+<tr>
+<td>ENV</td>
+<td>设定环境变量</td>
+</tr>
+<tr>
+<td>USER</td>
+<td>指定用户</td>
+</tr>
+<tr>
+<td>ENTRYPOINT</td>
+<td>容器入口</td>
+</tr>
+<tr>
+<td>VOLUME</td>
+<td>挂载点</td>
+</tr>
+</tbody>
+</table>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5">
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="https://makefriends.bs2dl.yy.com/bm1541077775565.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Charles Yang">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            My name is Charles Yang and this is my blog.<br>I am a full stack software engineer with a strong front-end focus.
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5">
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/lucky.github.io/2018/11/01/docker.2/">Docker常见Q&amp;A</a>
+        </p>
+    
+        <p>
+            <a href="/lucky.github.io/2018/11/01/docker.1/">Docker常用指令</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://blog.csdn.net/u013243347" target="_blank">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://github.com/yang657850144" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                @yangxin. All right reserved | Design & Hexo <a class="link dim white" href="http://www.codeblocq.com/">Charles Yang</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
